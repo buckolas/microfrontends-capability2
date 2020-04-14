@@ -21,7 +21,6 @@ const lifecycles = singleSpaAngular({
   template: '<capability2App-root />',
   Router,
   NgZone: NgZone,
-  AnimationEngine: AnimationEngine,
   domElementGetter: () => document.getElementById('capability-content')
 });
 
