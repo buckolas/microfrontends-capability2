@@ -12,14 +12,14 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "capability2App",
+      "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:browser",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/microfrontends-capability2",
             "index": "src/index.html",
-            "main": "src/main.single-spa.ts",
+            "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
@@ -28,14 +28,12 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": [
               "node_modules/@webcomponents/custom-elements/src/native-shim.js"
-            ],
-            "customWebpackConfig": {
-              "path": "./extra-webpack.config.js"
-            }
+            ]
           },
           "configurations": {
             "production": {
@@ -69,7 +67,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-builders/custom-webpack:dev-server",
+          "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "microfrontends-capability2:build"
           },
@@ -97,6 +95,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": [
