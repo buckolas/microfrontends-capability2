@@ -30,7 +30,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/@webcomponents/custom-elements/src/native-shim.js"
+            ],
             "customWebpackConfig": {
               "path": "./extra-webpack.config.js"
             }
@@ -97,7 +99,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@webcomponents/custom-elements/src/native-shim.js"
+            ]
           }
         },
         "lint": {
